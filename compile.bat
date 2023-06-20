@@ -1,0 +1,1 @@
+g++ -o bin/dungeon -Iinclude src/main.cpp

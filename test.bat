@@ -1,0 +1,13 @@
+g++ -o test/bin/Combate test/Combate_Test.cpp -Iinclude
+g++ -o test/bin/Enemigo test/Enemigo_Test.cpp -Iinclude
+g++ -o test/bin/Historia test/Historia_Test.cpp -Iinclude
+g++ -o test/bin/Jugador test/Jugador_Test.cpp -Iinclude
+g++ -o test/bin/Mapa test/Mapa_Test.cpp -Iinclude
+g++ -o test/bin/Narrador test/Narrador_Test.cpp -Iinclude
+g++ -o test/bin/Evento test/Evento_Test.cpp -Iinclude
+g++ -o test/bin/Armadura_Ligera test/Armadura_Ligera_Test.cpp -Iinclude
+g++ -o test/bin/Armadura_Media test/Armadura_Media_Test.cpp -Iinclude
+g++ -o test/bin/Armadura_Media test/Armadura_Pesada_Test.cpp -Iinclude
+g++ -o test/bin/Arco test/Arco_Test.cpp -Iinclude
+g++ -o test/bin/Espada test/Espada_Test.cpp -Iinclude
+g++ -o test/bin/Dagas test/Dagas_Test.cpp -Iinclude

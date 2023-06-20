@@ -1,0 +1,162 @@
+@startuml diagramadungeon
+
+abstract class Juego {
+    -tiempo: int
+    -puntuacion: int
+
+    {abstract} + puntuar() 
+}
+
+
+
+abstract class Jugador {
+    - Fuerza: int
+    - Vida: int
+    - nombre: string
+
+    {abstract} + Atacar()
+    {abstract} + Escapar()
+    {abstract} + TomarPocion()
+}
+
+abstract class Mapa{
+ 
+    {abstract} + Mostrar_Mapa_1()
+    {abstract} + Mostrar_Mapa_2()
+    {abstract} + Mostrar_Mapa_3()
+}
+
+class Historia{
+    -Historia
+    {abstract} + Contar_Eventos()
+}
+
+abstract class Enemigo {
+    - Fuerza: int
+    - Vida: int
+
+    {abstract} + Atacar()
+}
+
+class Combate{
+    - Fuerza: int
+    - Vida: int
+
+    {abstract} + Atacar()
+
+}
+
+class Narrador {
+
+    {abstract} + Contar_Historia()
+}
+
+class Armadura_Ligera {
+
+    - Fuerza: int           
+    - Constitucion: int     
+    - Destreza: int         
+    - Inteligencia: int     
+    - Sabiduria: int        
+    - Carisma: int        
+
+     {abstract} + Aumentar_Estadisticas()
+
+}
+
+class Armadura_Media {
+
+    - Fuerza: int         
+    - Constitucion: int    
+    - Destreza: int        
+    - Inteligencia: int    
+    - Sabiduria: int       
+    - Carisma: int        
+
+     {abstract} + Aumentar_Estadisticas()
+
+
+}
+
+class Armadura_Pesada {
+
+    - Fuerza: int          
+    - Constitucion: int     
+    - Destreza: int        
+    - Inteligencia: int    
+    - Sabiduria: int        
+    - Carisma: int          
+    
+     {abstract} + Aumentar_Estadisticas()
+}
+
+class Arco {
+
+    - Fuerza: int           
+    - Constitucion: int     
+    - Destreza: int        
+    - Inteligencia: int    
+    - Sabiduria: int        
+    - Carisma: int         
+
+     {abstract} + Aumentar_Estadisticas()
+}
+
+class Espada {
+
+    - Fuerza: int           
+    - Constitucion: int    
+    - Destreza: int        
+    - Inteligencia: int     
+    - Sabiduria: int       
+    - Carisma: int        
+
+     {abstract} + Aumentar_Estadisticas()
+
+}
+
+class Dagas {
+
+    - Fuerza: int          
+    - Constitucion: int    
+    - Destreza: int         
+    - Inteligencia: int    
+    - Sabiduria: int       
+    - Carisma: int         
+
+     {abstract} + Aumentar_Estadisticas()
+
+}
+
+
+
+class Evento {
+
+    {abstract} + Mostrar_Evento_1()
+    {abstract} + Mostrar_Evento_2()
+    {abstract} + Mostrar_Evento_3()
+    {abstract} + Mostrar_Evento_4()
+
+}
+
+clasS Dados{
+    -Resultados: int
+ {abstract} + Mostrar_Resultados()
+
+}
+
+Juego *-- Jugador
+Jugador *-- Armadura_Ligera
+Jugador *-- Armadura_Media
+Jugador *-- Armadura_Pesada
+Jugador *-- Dagas
+Jugador *-- Arco
+Jugador *-- Espada
+Juego *-- Narrador
+Narrador *-- Historia 
+Historia o-- Mapa
+Historia *-- Evento
+Jugador o-- Combate
+Enemigo o-- Combate
+ 
+@enduml 
